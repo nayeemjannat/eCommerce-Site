@@ -1,5 +1,7 @@
 const categoryContainer = document.getElementById("category-buttons");
 const productsContainer = document.getElementById("products-container");
+const modal = document.getElementById("productModal");
+const modalContent = document.getElementById("modalContent");
 
 let activeBtn = null;
 
@@ -95,9 +97,12 @@ function displayProducts(products) {
           <p class="font-bold text-lg mb-6">$${product.price}</p>
 
           <div class="flex gap-4">
-            <button class="flex-1 border rounded-lg py-2 text-gray-600 hover:bg-gray-100">
-              <i class="fa-regular fa-eye"></i> Details
-            </button>
+           <button onclick="showDetails(${product.id})"
+ class="flex-1 border rounded-lg py-2 text-gray-600 hover:bg-gray-100">
+ <i class="fa-regular fa-eye"></i> Details
+</button>
+
+
             <button class="flex-1 bg-indigo-600 text-white rounded-lg py-2 hover:bg-indigo-700">
               <i class="fa-solid fa-cart-arrow-down"></i> Add
             </button>
@@ -109,7 +114,49 @@ function displayProducts(products) {
 
     productsContainer.appendChild(card);
   });
+  
+}
+//modal
+async function showDetails(id) {
+
+  const res = await fetch(`https://fakestoreapi.com/products/${id}`);
+  const product = await res.json();
+
+  modalContent.innerHTML = `
+    <div class="grid md:grid-cols-2 gap-6 items-center">
+
+      <img src="${product.image}" class="h-64 mx-auto object-contain">
+
+      <div>
+        <h2 class="text-2xl font-bold mb-3">${product.title}</h2>
+
+        <p class="text-gray-600 text-sm mb-4">
+          ${product.description}
+        </p>
+
+        <div class="flex items-center justify-between mb-4">
+          <span class="text-xl font-bold text-indigo-600">$${product.price}</span>
+          <span class="text-sm text-gray-500">
+            ⭐ ${product.rating.rate} (${product.rating.count})
+          </span>
+        </div>
+
+        <div class="flex gap-3">
+          <button class="flex-1 bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700">
+            Buy Now
+          </button>
+          <button class="flex-1 border py-2 rounded-lg hover:bg-gray-100">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+
+    </div>
+  `;
+
+  modal.showModal();
 }
 
 loadCategories();
 loadProducts("all");
+
