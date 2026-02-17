@@ -23,27 +23,59 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-       <!--  NAVBAR  -->
-    <div class="bg-white shadow-sm">
-      <div class="container navbar">
-        <div class="navbar-start">
-          <a class="text-2xl font-bold text-indigo-600">SwiftCart</a>
-        </div>
+       
+<!-- NAVBAR -->
+<div class="bg-white shadow-sm">
+  <div class="container navbar">
 
-        <div class="navbar-center hidden md:flex gap-8 font-medium">
-         <button> <a href="./index.html" class="hover:text-indigo-600">Home</a></button>
-          <button><a href="./all-Products.html" class="hover:text-indigo-600">Products</a></button>
-          <a class="hover:text-indigo-600">About</a>
-          <a class="hover:text-indigo-600">Contact</a>
-        </div>
+    <!--Logo-->  
+    <div class="navbar-start">
+      <a class="text-2xl font-bold text-indigo-600">SwiftCart</a>
+    </div>
 
-        <div class="navbar-end">
-          <button class="btn btn-ghost btn-circle">
-            <i class="fa-solid fa-cart-shopping"></i>
-          </button>
-        </div>
+
+    <!--Menu -->
+    <div class="navbar-center hidden lg:flex gap-8 font-medium">
+      <a href="./index.html" class="hover:text-indigo-600">Home</a>
+      <a href="./all-Products.html" class="hover:text-indigo-600">Products</a>
+      <a class="hover:text-indigo-600">About</a>
+      <a class="hover:text-indigo-600">Contact</a>
+    </div>
+
+
+    <!-- RIGHT -->
+    <div class="navbar-end gap-2">
+
+      <!-- Cart -->
+      <button class="btn btn-ghost btn-circle relative">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span id="cart-count"
+          class="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1 rounded-full">
+          0
+        </span>
+      </button>
+
+      <!-- dropdown -->
+      <div class="dropdown dropdown-end lg:hidden">
+        <label tabindex="0" class="btn btn-ghost btn-circle">
+          <i class="fa-solid fa-bars text-lg"></i>
+        </label>
+
+        <ul tabindex="0"
+          class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-white rounded-box w-52">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./all-Products.html">Products</a></li>
+          <li><a>About</a></li>
+          <li><a>Contact</a></li>
+        </ul>
       </div>
-    </div> 
+
+    </div>
+
+  </div>
+</div>
+
+
 <section class="py-10 bg-gray-50">
   <div class="container mx-auto px-4">
 

@@ -1,4 +1,4 @@
-1) What is the difference between `null` and `undefined`?
+1. What is the difference between `null` and `undefined`?
 
 => 1. null একটি বিশেষ মান যা developer ইচ্ছাকৃতভাবে কোন variable এ "কিছু নেই" এইটা বুঝাতে চায়। Example:
  let b = null;
@@ -7,7 +7,7 @@ undefined হচ্ছে যখন একটি variable declare করা হ�
 let a;
 console.log(a); //undefined 
 
-2.What is the use of the `map()` function in JavaScript? How is it different from `forEach()`?
+2. What is the use of the `map()` function in JavaScript? How is it different from `forEach()`?
 
 => map() মূল অ্যারের প্রতিটি এলিমেন্টের উপর একটি ফাংশন প্রয়োগ করে,একটি নতুন অ্যারে রিটার্ন করে ৷ Example:
 const numbers = [1, 2, 3];

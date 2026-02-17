@@ -26,29 +26,60 @@
   <body class="font-[Noto_Sans] bg-gray-50">
 
 
-    <!--  NAVBAR  -->
-    <div class="bg-white shadow-sm">
-      <div class="container navbar">
-        <div class="navbar-start">
-          <a class="text-2xl font-bold text-indigo-600">SwiftCart</a>
-        </div>
+    
+<!-- NAVBAR -->
+<div class="bg-white shadow-sm">
+  <div class="container navbar">
 
-        <div class="navbar-center hidden md:flex gap-8 font-medium">
-          <a class="hover:text-indigo-600">Home</a>
-          <button><a href="./all-Products.html" class="hover:text-indigo-600">Products</a></button>
-          <a class="hover:text-indigo-600">About</a>
-          <a class="hover:text-indigo-600">Contact</a>
-        </div>
-
-        <div class="navbar-end">
-          <button class="btn btn-ghost btn-circle">
-            <i class="fa-solid fa-cart-shopping"></i>
-          </button>
-        </div>
-      </div>
+    <!--Logo-->  
+    <div class="navbar-start">
+      <a class="text-2xl font-bold text-indigo-600">SwiftCart</a>
     </div>
 
-    <!--  HERO -->
+
+    <!--Menu -->
+    <div class="navbar-center hidden lg:flex gap-8 font-medium">
+      <a href="./index.html" class="hover:text-indigo-600">Home</a>
+      <a href="./all-Products.html" class="hover:text-indigo-600">Products</a>
+      <a class="hover:text-indigo-600">About</a>
+      <a class="hover:text-indigo-600">Contact</a>
+    </div>
+
+
+    <!-- RIGHT -->
+    <div class="navbar-end gap-2"> 
+
+      <!-- Cart -->
+      <button class="btn btn-ghost btn-circle relative">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span id="cart-count"
+          class="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1 rounded-full">
+          0
+        </span>
+      </button>
+
+      <!-- dropdown -->
+      <div class="dropdown dropdown-end lg:hidden">
+        <label tabindex="0" class="btn btn-ghost btn-circle">
+          <i class="fa-solid fa-bars text-lg"></i>
+        </label>
+
+        <ul tabindex="0"
+          class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-white rounded-box w-52">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./all-Products.html">Products</a></li>
+          <li><a>About</a></li>
+          <li><a>Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+    <!--  banner -->
  <section
   class="relative min-h-[500px] flex items-center 
          bg-center bg-cover"
@@ -61,7 +92,7 @@
       <div class="container relative z-10 text-white">
         <h1 class="text-5xl font-bold mb-4">Best Collection For You</h1>
         <p class="mb-6 text-gray-200">
-          Discover the latest trends in fashion, electronics, and more.
+          Discover the latest trends in fashion.
         </p>
 
         <button
@@ -155,7 +186,7 @@
           <div class="bg-white rounded-2xl shadow-sm overflow-hidden border">
             <div class="bg-gray-100 flex justify-center items-center h-72">
               <img
-                src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+                src="./Assets/1.jpg"
                 class="h-56 object-contain"
               />
             </div>
@@ -188,56 +219,61 @@
               </div>
             </div>
           </div>
-          <!-- Product Card 2 -->
-          <div class="bg-white rounded-2xl shadow-sm overflow-hidden border">
-            <div class="bg-gray-100 flex justify-center items-center h-72">
-              <img
-                src="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879_.jpg"
-                class="h-56 object-contain"
-              />
-            </div>
+       <!-- Product Card 2 -->
+<div class="bg-white rounded-2xl shadow-sm overflow-hidden border">
+  
+  <!-- Image Container -->
+  <div class="bg-gray-100 h-72 w-full overflow-hidden">
+    <img
+      src="./Assets/2.jpg"
+      class="w-full h-full object-cover"
+      alt="product"
+    />
+  </div>
 
-            <div class="p-6">
-              <div class="flex justify-between items-center mb-4">
-                <span
-                  class="bg-indigo-100 text-indigo-600 text-xs px-3 py-1 rounded-full font-medium"
-                >
-                  Men's Clothing
-                </span>
-                <span class="text-sm text-gray-500 flex items-center gap-1">
-                  ⭐ 4.1 (259)
-                </span>
-              </div>
+  <div class="p-6">
+    <div class="flex justify-between items-center mb-4">
+      <span
+        class="bg-indigo-100 text-indigo-600 text-xs px-3 py-1 rounded-full font-medium"
+      >
+        Men's Clothing
+      </span>
+      <span class="text-sm text-gray-500 flex items-center gap-1">
+        ⭐ 4.1 (259)
+      </span>
+    </div>
 
-              <h3 class="font-semibold text-lg mb-3">
-                Mens Casual Premium Slim Fit T-Shirts
-              </h3>
+    <h3 class="font-semibold text-lg mb-3">
+      Mens Casual Premium Slim Fit T-Shirts
+    </h3>
 
-              <p class="font-bold text-lg mb-6">$22.3</p>
+    <p class="font-bold text-lg mb-6">$22.3</p>
 
-              <div class="flex gap-4">
-                <button
-                  class="flex-1 border rounded-lg py-2 text-gray-600 hover:bg-gray-100"
-                >
-                  <i class="fa-regular fa-eye"></i> Details
-                </button>
-                <button
-                  class="flex-1 bg-indigo-600 text-white rounded-lg py-2 hover:bg-indigo-700"
-                >
-                  <i class="fa-solid fa-cart-arrow-down"></i> Add
-                </button>
-              </div>
-            </div>
-          </div>
+    <div class="flex gap-4">
+      <button
+        class="flex-1 border rounded-lg py-2 text-gray-600 hover:bg-gray-100"
+      >
+        <i class="fa-regular fa-eye"></i> Details
+      </button>
+      <button
+        class="flex-1 bg-indigo-600 text-white rounded-lg py-2 hover:bg-indigo-700"
+      >
+        <i class="fa-solid fa-cart-arrow-down"></i> Add
+      </button>
+    </div>
+  </div>
+</div>
+
 
           <!-- Product Card 3 -->
           <div class="bg-white rounded-2xl shadow-sm overflow-hidden border">
-            <div class="bg-gray-100 flex justify-center items-center h-72">
-              <img
-                src="https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg"
-                class="h-56 object-contain"
-              />
-            </div>
+            <div class="bg-gray-100 h-72 w-full overflow-hidden">
+    <img
+      src="./Assets/3.jpg"
+      class="w-full h-full object-cover"
+      alt="product"
+    />
+  </div>
 
             <div class="p-6">
               <div class="flex justify-between items-center mb-4">
